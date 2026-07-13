@@ -1,0 +1,38 @@
+[package]
+name = "dioxus-openapi"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+authors = ["DreamingCodes <me@dreaming.codes>"]
+license = "MIT OR Apache-2.0"
+description = "OpenAPI (utoipa) for Dioxus server functions — dual macros, inventory auto-registration, Scalar HTML"
+repository = "https://github.com/DreamingCodes/dioxus-openapi"
+homepage = "https://github.com/DreamingCodes/dioxus-openapi"
+documentation = "https://docs.rs/dioxus-openapi"
+readme = "README.md"
+keywords = ["dioxus", "openapi", "utoipa", "axum", "scalar"]
+categories = ["web-programming", "development-tools"]
+include = [
+    "src/**/*",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE-MIT",
+    "LICENSE-APACHE",
+]
+
+[dependencies]
+dioxus-openapi-macros = { version = "0.1.0", path = "macros" }
+inventory = { version = "0.3", optional = true }
+utoipa = { version = "5", optional = true }
+serde_json = { version = "1", optional = true }
+
+[features]
+default = []
+# Enable when building the Dioxus server binary. Macros always expand; this
+# feature provides inventory + utoipa types used by `#[cfg(feature = "server")]`
+# code generated in the consumer crate.
+server = ["dep:inventory", "dep:utoipa", "dep:serde_json"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

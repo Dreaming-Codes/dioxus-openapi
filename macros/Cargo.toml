@@ -1,0 +1,23 @@
+[package]
+name = "dioxus-openapi-macros"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+authors = ["DreamingCodes <me@dreaming.codes>"]
+license = "MIT OR Apache-2.0"
+description = "Proc macros for dioxus-openapi: dual Dioxus server-fn + utoipa path expansion"
+repository = "https://github.com/DreamingCodes/dioxus-openapi"
+homepage = "https://github.com/DreamingCodes/dioxus-openapi"
+documentation = "https://docs.rs/dioxus-openapi-macros"
+readme = "README.md"
+keywords = ["dioxus", "openapi", "utoipa", "proc-macro"]
+categories = ["development-tools::procedural-macro-helpers"]
+include = ["src/**/*", "Cargo.toml", "README.md", "LICENSE-MIT", "LICENSE-APACHE"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1"
+quote = "1"
+syn = { version = "2", features = ["full", "parsing", "extra-traits"] }
