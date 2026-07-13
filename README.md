@@ -2,7 +2,6 @@
 
 [![Crates.io](https://img.shields.io/crates/v/dioxus-openapi.svg)](https://crates.io/crates/dioxus-openapi)
 [![Docs.rs](https://docs.rs/dioxus-openapi/badge.svg)](https://docs.rs/dioxus-openapi)
-[![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue.svg)](LICENSE-MIT)
 
 OpenAPI ([utoipa](https://crates.io/crates/utoipa)) for **Dioxus 0.7 server functions**, without retyping paths.
 
@@ -64,20 +63,3 @@ Wire types used in responses should derive `utoipa::ToSchema` on the server:
 #[derive(serde::Serialize, serde::Deserialize)]
 pub struct Mac { /* … */ }
 ```
-
-## Layout
-
-```
-dioxus-openapi/           # this crate
-macros/                   # dioxus-openapi-macros (published separately)
-```
-
-## Non-goals
-
-- Replacing Dioxus inventory with utoipa-axum `routes!` (would dual-register)
-- App-specific theming (pass `ScalarOptions.custom_css` from the host)
-- WebSocket / binary documentation
-
-## License
-
-Licensed under either of [Apache License, Version 2.0](LICENSE-APACHE) or [MIT](LICENSE-MIT) at your option.

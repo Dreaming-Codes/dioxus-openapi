@@ -4,10 +4,10 @@ version = "0.1.0"
 edition = "2024"
 rust-version = "1.85"
 authors = ["DreamingCodes <me@dreaming.codes>"]
-license = "MIT OR Apache-2.0"
-description = "OpenAPI (utoipa) for Dioxus server functions — dual macros, inventory auto-registration, Scalar HTML"
-repository = "https://github.com/DreamingCodes/dioxus-openapi"
-homepage = "https://github.com/DreamingCodes/dioxus-openapi"
+license = "MIT"
+description = "OpenAPI (utoipa) for Dioxus server functions"
+repository = "https://github.com/Dreaming-Codes/dioxus-openapi"
+homepage = "https://github.com/Dreaming-Codes/dioxus-openapi"
 documentation = "https://docs.rs/dioxus-openapi"
 readme = "README.md"
 keywords = ["dioxus", "openapi", "utoipa", "axum", "scalar"]
@@ -16,8 +16,7 @@ include = [
     "src/**/*",
     "Cargo.toml",
     "README.md",
-    "LICENSE-MIT",
-    "LICENSE-APACHE",
+    "LICENSE",
 ]
 
 [dependencies]
